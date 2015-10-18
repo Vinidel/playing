@@ -10,6 +10,8 @@ import views.html.*;
 public class Application extends Controller {
 
     static Form<Task> taskForm = Form.form(Task.class);
+    static Form<Type> typeForm = Form.form(Type.class);
+
 
     public static Result index() {
         //return ok("Your new application is ready.");
@@ -41,7 +43,15 @@ public class Application extends Controller {
     }
 
     public static Result types(){
-      return ok(views.html.types.render());
+      return ok(views.html.types.render(Type.all(), typeForm));
+    }
+
+    public static Result newType(){
+      return TODO;
+    }
+
+    public static Result deleteType(Long id){
+      return TODO;
     }
 
 }

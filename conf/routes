@@ -12,6 +12,8 @@ POST    /tasks/:id/delete           controllers.Application.deleteTask(id: Long)
 
 #Types
 GET    /types                       controllers.Application.types()
+POST   /types                       controllers.Application.newType()
+POST   /types/:id/delete            controllers.Application.deleteType(id: Long)
 
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.at(path="/public", file)
